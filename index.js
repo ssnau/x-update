@@ -2,7 +2,6 @@ var spawn = require('xspawn');
 var noop = function(){};
 var co = require('co');
 var getRunner = function (dir) {
-  var spawn = require('./util').spawn;
   return function (cmd, onData) {
     return spawn(`cd ${dir} && ${cmd}`, {$through: true, onData});
   }
