@@ -4,5 +4,5 @@ run({root: __dirname})
     console.log(res);
   })
   .catch(function(e) {
-    console.log(e);
+    console.log('err', e);
   });
