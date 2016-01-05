@@ -16,11 +16,13 @@ var runAction = function *(opts) {
   // 1. reset and clean
   yield run('git reset --hard HEAD');
   yield run('git clean -f');
+  var res = yield run('git rev-parse --verify HEAD');
+  var version = res.out.trim();
 
   // 2. git pull
   yield run('git pull');
   // 3. diff package.json and install
-  var res = yield run('git diff "HEAD^" "HEAD" -- package.json');
+  var res = yield run(`git diff ${version} HEAD -- package.json`);
   var shouldInstall = !!res.out.trim();
   console.log(shouldInstall ? "found package.json changed, installing deps" : "skip install deps");
   if (shouldInstall) {
