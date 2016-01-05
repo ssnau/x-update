@@ -1,0 +1,27 @@
+{
+  "name": "x-update",
+  "version": "1.0.0",
+  "description": "a self update script",
+  "main": "index.js",
+  "dependencies": {
+    "co": "^4.6.0",
+    "xspawn": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssnau/x-update.git"
+  },
+  "keywords": [
+    "update"
+  ],
+  "author": "ssnau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ssnau/x-update/issues"
+  },
+  "homepage": "https://github.com/ssnau/x-update#readme"
+}
