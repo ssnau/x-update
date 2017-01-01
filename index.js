@@ -15,7 +15,7 @@ var runAction = function *(opts) {
 
   // 1. reset and clean
   yield run('git reset --hard HEAD');
-  yield run('git clean -f');
+  yield run('git clean -fd');
   var res = yield run('git rev-parse --verify HEAD');
   var version = res.out.trim();
 
